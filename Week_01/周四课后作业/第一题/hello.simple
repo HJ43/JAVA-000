@@ -1,0 +1,147 @@
+// 文件名
+Compiled from "Hello.java"
+// 类名
+public class com.las.util.Hello {
+  // 构造函数
+  public com.las.util.Hello();
+    Code:
+	   // 装载一个引用到栈
+       0: aload_0
+	   // 调用Object的inti()方法
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       // 装载一个引用到栈
+	   4: aload_0
+	   // 定义一个int型的常量1
+       5: iconst_1
+	   // 把a变量指向常量池第二的位置
+       6: putfield      #2                  // Field a:I
+       // 装载一个引用到栈
+	   9: aload_0
+	   // 定义一个int型的常量2
+      10: iconst_2
+	  // 把b变量指向常量池第三的位置
+      11: putfield      #3                  // Field b:I
+      14: return
+
+  // 定义一个加的方法
+  public int add();
+    Code:
+	   // 装载一个引用到栈
+       0: aload_0
+	   // 获取变量a的值
+       1: getfield      #2                  // Field a:I
+       // 装载一个引用到栈
+	   4: aload_0
+	   // 获取变量b的值
+       5: getfield      #3                  // Field b:I
+       // 加法指令
+	   8: iadd
+       // 返回一个int类型的值
+	   9: ireturn
+
+  // 定义一个减的方法
+  public int subtract();
+    Code:
+	   // 装载一个引用到栈
+       0: aload_0
+	   // 获取变量a的值
+       1: getfield      #2                  // Field a:I
+       // 装载一个引用到栈
+	   4: aload_0
+       // 获取变量b的值
+	   5: getfield      #3                  // Field b:I
+       // 减法指令
+	   8: isub
+	   // 返回一个int类型的值
+       9: ireturn
+  // 定义一个乘的方法
+  public int multiply();
+    Code:
+	   // 装载一个引用到栈
+       0: aload_0
+	   // 获取变量a的值
+       1: getfield      #2                  // Field a:I
+       // 装载一个引用到栈
+	   4: aload_0
+       // 获取变量b的值
+	   5: getfield      #3                  // Field b:I
+       // 乘法指令
+	   8: imul
+	   // 返回一个int类型的值
+       9: ireturn
+
+  // 定义一个除的方法
+  public int divide();
+    Code:
+	   // 装载一个引用到栈
+       0: aload_0
+       // 获取变量a的值
+	   1: getfield      #2                  // Field a:I
+       // 装载一个引用到栈
+	   4: aload_0
+       // 获取变量b的值
+	   5: getfield      #3                  // Field b:I
+       // 除法指令
+	   8: idiv
+       // 返回一个int类型的值
+	   9: ireturn
+
+  public static void main(java.lang.String[]);
+    Code:
+	   // new一个Hello对象
+       0: new           #4                  // class com/las/util/Hello
+       3: dup
+       // 调用对象的初始化的方法
+	   4: invokespecial #5                  // Method "<init>":()V
+       7: astore_1
+       8: aload_1
+	   // 调用对象的add()方法
+       9: invokevirtual #6                  // Method add:()I
+      12: istore_2
+      13: aload_1
+      // subtract()方法
+	  14: invokevirtual #7                  // Method subtract:()I
+      17: pop
+      18: aload_1
+      // 调用对象的multiply()方法
+	  19: invokevirtual #8                  // Method multiply:()I
+      22: pop
+      23: aload_1
+	  // 调用对象的divide()方法
+      24: invokevirtual #9                  // Method divide:()I
+      27: pop
+      28: iload_2
+	  // 定义一个int型的常量1
+      29: iconst_1
+      30: if_icmple     41
+      33: getstatic     #10                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      36: ldc           #11                 // String Sum > 1
+	  // 调用printLn方法
+	  38: invokevirtual #12                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      41: iconst_0
+      42: istore_3
+      43: iload_3
+      44: iload_2
+      45: if_icmpge     79
+      48: getstatic     #10                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      // new一个StringBuilder对象
+	  51: new           #13                 // class java/lang/StringBuilder
+      54: dup
+	  // 初始化StringBuilder
+      55: invokespecial #14                 // Method java/lang/StringBuilder."<init>":()V
+      58: ldc           #15                 // String i=
+      // 调用StringBuilder.append(String)方法
+	  60: invokevirtual #16                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      63: iload_3
+      // 调用StringBuilder.append(int)方法
+	  64: invokevirtual #17                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      // 调用StringBuilder.toString()方法
+	  67: invokevirtual #18                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      // 调用println()方法
+	  70: invokevirtual #12                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      // i加1
+	  73: iinc          3, 1
+      // 跳转到43行
+	  76: goto          43
+      79: return
+}
