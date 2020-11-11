@@ -1,4 +1,3 @@
-周四作业
 package java0.conc0303;
 
 import java.util.concurrent.*;
