@@ -129,4 +129,4 @@ public class Homework03 {
 ```
 
 周六作业
-![](https://github.com/HJ43/JAVA-000/tree/main/pic)
+![Image text](https://github.com/HJ43/JAVA-000/blob/main/pic/w4-1.png)
